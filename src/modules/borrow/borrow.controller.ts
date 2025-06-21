@@ -9,7 +9,7 @@ const createBorrowRequest = async (req: Request, res: Response) :Promise<void>=>
         const book = await Book.findById(req.body.book);
         console.log(book)
         if(!book){
-             res.send({
+           res.status(404).send({
                 success: false,
                  message: "Book not found",
           
@@ -23,7 +23,7 @@ const createBorrowRequest = async (req: Request, res: Response) :Promise<void>=>
 
 
         if(book?.copies < req.body.quantity){
-             res.send({
+           res.status(404).send({
                 success: false,
         message: `Only ${book.copies} copies are available`,
 
