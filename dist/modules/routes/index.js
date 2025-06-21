@@ -7,6 +7,6 @@ const express_1 = require("express");
 const book_router_1 = __importDefault(require("../book/book.router"));
 const borrow_router_1 = __importDefault(require("../borrow/borrow.router"));
 const routes = (0, express_1.Router)();
-routes.use("/books", book_router_1.default);
-routes.use("/borrow", borrow_router_1.default);
+routes.use("/api/books", book_router_1.default);
+routes.use("/api/borrow", borrow_router_1.default);
 exports.default = routes;
