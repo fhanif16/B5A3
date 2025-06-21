@@ -20,12 +20,13 @@ This API allows users to view, update, delete, and borrow books, with proper val
 ---
 
 ## 📁 Project Structure
-src
-config
-modlues
-routes
-server.ts
+src/
+├── controllers/
+├── models/
+├── routes/
+├── server.ts
 
-##Author
+👩‍💻 Author
 Fatema Hanif
+📧 fatemahanif16@gmail.com
 
