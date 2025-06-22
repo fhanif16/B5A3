@@ -21,14 +21,14 @@ const createBorrowRequest = (req, res) => __awaiter(void 0, void 0, void 0, func
         const book = yield book_model_1.default.findById(req.body.book);
         console.log(book);
         if (!book) {
-            res.send({
+            res.status(404).send({
                 success: false,
                 message: "Book not found",
             });
             return;
         }
         if ((book === null || book === void 0 ? void 0 : book.copies) < req.body.quantity) {
-            res.send({
+            res.status(404).send({
                 success: false,
                 message: `Only ${book.copies} copies are available`,
             });

@@ -61,6 +61,12 @@ const getBookById = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     try {
         const bookId = req.params.bookId;
         const data = yield book_model_1.default.findById(bookId);
+        //    if (!data) {
+        //     return res.status(404).send({
+        //         success: false,
+        //         message: "Book not found",
+        //     });
+        // }
         res.send({
             success: true,
             message: "Book retrieved successfully",
@@ -79,6 +85,12 @@ const updateBook = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
     try {
         const bookId = req.params.bookId;
         const data = yield book_model_1.default.findByIdAndUpdate(bookId, req.body, { new: true, runValidators: true });
+        //    if (!data) {
+        //     return res.status(404).send({
+        //         success: false,
+        //         message: "Book not found",
+        //     });
+        // }
         res.send({
             success: true,
             message: "Book updated successfully",
@@ -97,6 +109,12 @@ const deleteBookById = (req, res) => __awaiter(void 0, void 0, void 0, function*
     try {
         const bookId = req.params.bookId;
         const data = yield book_model_1.default.findByIdAndDelete(bookId);
+        //    if (!data) {
+        //     return res.status(404).send({
+        //         success: false,
+        //         message: "Book not found",
+        //     });
+        // }
         res.send({
             success: true,
             message: "Book deleted successfull",
