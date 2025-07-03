@@ -26,7 +26,7 @@ const createBook = async (req: Request, res: Response)=>{
 const getBooks =async (req: Request, res: Response)=> {
     try {
 
-        const {filter, sortBy='createdAt', sort='asc', limit=10}=req.query;
+        const {filter, sortBy='createdAt', sort='asc', limit=100}=req.query;
         const query: any ={};
         if(filter){
             query.genre = filter;
