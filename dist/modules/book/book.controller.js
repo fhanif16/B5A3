@@ -33,7 +33,7 @@ const createBook = (req, res) => __awaiter(void 0, void 0, void 0, function* () 
 });
 const getBooks = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const { filter, sortBy = 'createdAt', sort = 'asc', limit = 10 } = req.query;
+        const { filter, sortBy = 'createdAt', sort = 'asc', limit = 100 } = req.query;
         const query = {};
         if (filter) {
             query.genre = filter;
